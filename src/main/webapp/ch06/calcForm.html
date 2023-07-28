@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Simple Calculator</title>
+</head>
+<body>
+	<h2>계산기 서블릿</h2>
+	<hr>
+	<form method="post" action="/jwbook/calc.jsp">
+		<input type="text" id="output" name="n1" size="10"> <br>
+		<input type="button" name="num7" value="7" onclick="send(7)">&nbsp;
+		<input type="button" name="num8" value="8" onclick="send(8)">&nbsp;
+		<input type="button" name="num9" value="9" onclick="send(9)">&nbsp;
+		<input type="button" name="division" value="/" onclick="send('/')"><br>
+
+		<input type="button" name="num4" value="4" onclick="send(4)">&nbsp;
+		<input type="button" name="num5" value="5" onclick="send(5)">&nbsp;
+		<input type="button" name="num6" value="6" onclick="send(6)">&nbsp;
+		<input type="button" name="multiplication" value="*" onclick="send('*')"><br>
+
+		<input type="button" name="num1" value="1" onclick="send(1)">&nbsp;
+		<input type="button" name="num2" value="2" onclick="send(2)">&nbsp;
+		<input type="button" name="num3" value="3" onclick="send(3)">&nbsp;
+		<input type="button" name="Minus" value="-" onclick="send('-')"><br>
+		
+		<input type="button" name="num0" value="0" onclick="send(0)">&nbsp;
+		<input type="reset" name="reset" value="C">&nbsp;
+		<input type="submit" value="계산">&nbsp;
+		<input type="button" name="plus" value="+" onclick="send('+')"><br>
+	
+	</form>	
+	
+	
+		
+	<script>
+	
+    function send(data) {
+        output.value = output.value + data;
+      }
+    
+/*     function calculate() {
+    	var display = document.getElementById('output');  //ID Display 요소의 값을 display 변수에 담는다.
+    	var result = eval(display.value);                  //display 변수의 값을 계산하여 result 변수에 저장한다.
+
+    	document.getElementById('output').value = result;  //위에 계산된 result의 값을 ID가 Result인 요소에 넣는다.
+    	} */
+    
+	
+	
+/*     function calculate() {
+    	
+    let s = output.value;		
+    if (s.indexOf("+") != -1) {
+    	
+     	var values = s.split("+");
+     	n1 = parseInt(values[0]);
+     	n2 = parseInt(values[1]);
+     	output.value = n1 + n2;    6
+    
+    } 
+    else if(s.indexOf("-") != -1) {
+    			
+     	var values = s.split("-");
+     	n1 = parseInt(values[0]);
+     	n2 = parseInt(values[1]);
+     	output.value = n1 - n2; 
+    	
+    }
+    else if(s.indexOf("/") != -1) {
+		
+     	var values = s.split("/");
+     	n1 = parseInt(values[0]);
+     	n2 = parseInt(values[1]);
+     	output.value = n1 / n2; 
+    	
+    }
+    else if(s.indexOf("*") != -1) {
+		
+     	var values = s.split("*");
+     	n1 = parseInt(values[0]);
+     	n2 = parseInt(values[1]);
+     	output.value = n1 * n2; 
+    	
+    }
+    } */
+
+    
+	
+	</script>		
+
+	    
+</body>
+</html>
